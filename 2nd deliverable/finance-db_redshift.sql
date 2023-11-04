@@ -40,12 +40,27 @@ CREATE TABLE ohlcv_data (
     low DECIMAL(20,10) NOT NULL,
     "close" DECIMAL(20,10) NOT NULL,
     adj_close DECIMAL(20,10) NOT NULL,
-    volume DECIMAL(20,10) NOT NULL
-    id PRIMARY KEY(asset_id, source_id, ts)
+    volume DECIMAL(20,10) NOT NULL,
+    PRIMARY KEY(asset_id, source_id, ts)
 )
-DISTSTYLE KEY
-DISTKEY(pair_id)
-SORTKEY("timestamp");
+DISTSTYLE EVEN
+SORTKEY(ts);
+
+
+CREATE TABLE staging_ohlcv_data (
+    asset_id INT REFERENCES assets(asset_id),
+    source_id INT REFERENCES data_sources(source_id),
+    ts TIMESTAMP NOT NULL,
+    "open" DECIMAL(20,10) NOT NULL,
+    high DECIMAL(20,10) NOT NULL,
+    low DECIMAL(20,10) NOT NULL,
+    "close" DECIMAL(20,10) NOT NULL,
+    adj_close DECIMAL(20,10) NOT NULL,
+    volume DECIMAL(20,10) NOT NULL,
+    PRIMARY KEY(asset_id, source_id, ts)
+)
+DISTSTYLE EVEN
+SORTKEY(ts);
 
 
 -- Inserting Source Types
