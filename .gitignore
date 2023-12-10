@@ -1,1 +1,6 @@
-*.env
+**/*.env
+3rd deliverable/logs/*
+3rd deliverable/keys/*
+week10/base_example/logs/*
+week10/ETL con Airflow y Docker/logs/*
+week10/ETL con Airflow y Docker/logs/*

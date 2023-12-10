@@ -1,0 +1,6 @@
+python-dotenv
+pandas_market_calendars
+yfinance
+ipython
+ipykernel
+apache-airflow-providers-papermill>=2.0.0

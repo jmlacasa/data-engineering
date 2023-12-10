@@ -1,3 +1,6 @@
+CREATE SCHEMA deliverable3;
+SET search_path TO deliverable3;
+
 -- Source Types Table
 -- Similar to asset_types.
 CREATE TABLE source_types (
@@ -40,7 +43,7 @@ CREATE TABLE ohlcv_data (
     "close" DECIMAL(20,10) NOT NULL,
     adj_close DECIMAL(20,10) NOT NULL,
     volume DECIMAL(20,10) NOT null,
-    PRIMARY KEY(asset_id, source_id, ts)
+    PRIMARY KEY (asset_id, source_id, ts)
 )
 ;
 
@@ -54,7 +57,7 @@ CREATE TABLE staging_ohlcv_data (
     "close" DECIMAL(20,10) NOT NULL,
     adj_close DECIMAL(20,10) NOT NULL,
     volume DECIMAL(20,10) NOT NULL,
-    PRIMARY KEY(asset_id, source_id, ts)
+    PRIMARY KEY (asset_id, source_id, ts)
 )
 ;
 
