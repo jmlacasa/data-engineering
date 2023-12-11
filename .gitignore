@@ -4,3 +4,6 @@
 week10/base_example/logs/*
 week10/ETL con Airflow y Docker/logs/*
 week10/ETL con Airflow y Docker/logs/*
+!3rd deliverable/keys/db.env
+!3rd deliverable/logs/placeholder.txt
+!3rd deliverable/plugins/placeholder.txt
