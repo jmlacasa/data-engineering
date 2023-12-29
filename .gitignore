@@ -1,8 +1,10 @@
 **/*.env
 3rd deliverable/logs/*
 3rd deliverable/keys/*
+4th deliverable (final)/logs/*
 week10/base_example/logs/*
 week10/ETL con Airflow y Docker/logs/*
 week10/ETL con Airflow y Docker/logs/*
 !3rd deliverable/keys/db.env
 !3rd deliverable/logs/.keep
+!4th deliverable (final)/keys/*
