@@ -9,7 +9,7 @@ Welcome to the exercises and projects repository for the Data Engineering course
     - [ETL pipeline - 1st deliverable](#etl-pipeline---1st-deliverable)
     - [Staging Data and Validating - 2nd deliverable](#staging-data-and-validating---2nd-deliverable)
     - [Containerizing and Scheduling the ETL - 3rd deliverable](#containerizing-and-scheduling-the-etl---3rd-deliverable)
-    - [ETL pipeline - 4th deliverable](#etl-pipeline---1st-deliverable)
+    - [Setting up XCOM and SMTP communication - 4th deliverable](#setting-up-xcom-and-smtp-communication---4th-deliverable)
 - [Exercises](#exercises)
     - [Week 4 - Database Initialization and Data Processing Procedures](#week-4)
     - [Week 6 - Data Consumption and Trend Visualization](#week-6)
