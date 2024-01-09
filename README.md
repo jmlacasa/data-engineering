@@ -7,6 +7,9 @@ Welcome to the exercises and projects repository for the Data Engineering course
 - [Introduction](#introduction)
 - [Projects](#projects)
     - [ETL pipeline - 1st deliverable](#etl-pipeline---1st-deliverable)
+    - [Staging Data and Validating - 2nd deliverable](#staging-data-and-validating---2nd-deliverable)
+    - [Containerizing and Scheduling the ETL - 3rd deliverable](#containerizing-and-scheduling-the-etl---3rd-deliverable)
+    - [ETL pipeline - 4th deliverable](#etl-pipeline---1st-deliverable)
 - [Exercises](#exercises)
     - [Week 4 - Database Initialization and Data Processing Procedures](#week-4)
     - [Week 6 - Data Consumption and Trend Visualization](#week-6)
@@ -22,10 +25,32 @@ Welcome to the Data Engineering course project repository.
 
 The main technologies and tools we're employing include:
 - **Pandas**: For scripting and data manipulation.
-- **Amazon Redshift**: As our primary data storage and querying solution.
+- **Amazon Redshift / PostgreSQL**: As our primary data storage and querying solution.
 - **psycopg2**: To connect and interact with Amazon Redshift.
 - **YFinance**: A data source utilized for fetching stock ticker data.
 
+## Staging Data and Validating - 2nd deliverable
+[This deliverable](./2nd%20deliverable) advances the ETL pipeline by adding a validation step on the downloaded data and uploading to a staging table before replacing in the production table.
+
+The main technologies and tools we're employing include (additional to the ones mentioned in deliverable 1):
+- **pandas_market_calendars**: for market data validation.
+- **Custom functions built in Python**: making the repeatable process of uploading data replicable.
+
+## Containerizing and Scheduling the ETL - 3rd deliverable
+[On this deliverable](./3rd%20deliverable) a custom Docker compose is built for scheduling the ETL on Airflow. From this step onward the ETL is runnable on any computer that has Docker without any further configuration.
+
+The main technologies and tools we're employing include (additional to the ones mentioned in deliverable 1 and 2):
+- **Docker**: custom Docker compose file for further modularization and reproducibility.
+- **Airflow**: daily execution of the ETL.
+- **Papermill**: PapermillOperator for executing python notebooks.
+- **PostgreSQL**: as a microservice in Docker with ticker data. (this can be replaced with Redshift connection information)
+
+## Setting up XCOM and SMTP communication - 4th deliverable
+[Here we set up](./4th%20deliverable%20(final)) XCOM between tasks in Airflow to forward basic data downloading reports to a new task. This tasks sends the message to specific receivers.
+
+The main technologies and tools we're employing include (additional to the ones mentioned in deliverable 1, 2 and 3):
+- **XCOM**: custom Docker compose file for further modularization and reproducibility.
+- **SMTPlib**: python library to handle SMTP connections.
 
 # **Exercises**
 Weekly content has been selectively curated, omitting certain weeks with introductory material to maintain the specialized focus of this repository. 
